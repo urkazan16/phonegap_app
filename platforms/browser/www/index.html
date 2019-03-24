@@ -7,34 +7,44 @@
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
-    <!-- Good default declaration:
-    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-        * Enable inline JS: add 'unsafe-inline' to default-src
-        * Enable eval(): add 'unsafe-eval' to default-src
-    * Create your own at http://cspisawesome.com
-    -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; media-src *" />
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>Hello World</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+    <title>Phone App</title>
 </head>
 
 <body>
-    <div class="app">
-        <h1>PhoneGap</h1>
-        <div id="deviceready" class="blink">
-            <p class="event listening">Connecting to Device</p>
-            <p class="event received">Device is Ready</p>
+        <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project</a>
         </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="servis.html">servis</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div class="container text-center">
+    <h1>Привет !</h1>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
-        app.initialize();
-    </script>
+
 </body>
 
 </html>
